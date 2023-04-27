@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import SubHeading from "../../animatedComponents/SubHeading";
 import { SiGraphql } from "react-icons/si";
 import { IoCodeSlash } from "react-icons/io5";
@@ -6,6 +6,7 @@ import { BsGithub, BsFillDatabaseFill } from "react-icons/bs";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
+import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 
 const images = [
     "https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
@@ -23,6 +24,7 @@ const images = [
 ];
 
 export default function Index() {
+    const carouselRef = useRef(null);
     return (
         <section id="about">
             <article className="py-20 flex items-center border-b border-[#585d65]">
@@ -179,37 +181,51 @@ export default function Index() {
                         </div>
                     </div>
                     <div className="mt-12">
-                        <SubHeading text={"Programming Languages"} />
+                        <SubHeading text={"Programming Langauages"} />
                         <h2 className="mt-4 text-6xl font-extrabold">
                             Languages
                         </h2>
-
-                        <div className="mt-12">
-                            <div class="container-fluid">
-                                <OwlCarousel
-                                    items={2}
-                                    className="owl-theme"
-                                    loop
-                                    nav
-                                    margin={8}
-                                    navContainerClass="absolute top-[-100px] z-[30] right-0"
-                                    navClass={[
-                                        "w-[56px] aspect-square rounded-full border border-[#585d65] hover:text-[#68e0cf] hover:border-[#68e0cf] text-lg font-bold leading-10",
-                                        "w-[56px] ml-4 aspect-square rounded-full border border-[#585d65] hover:text-[#68e0cf] hover:border-[#68e0cf] text-lg font-bold leading-10",
-                                    ]}
-                                    dots={false}
+                        <div className="container-fluid mt-12 relative">
+                            <div className="carousel-trigger absolute top-[-50%] right-0">
+                                <button
+                                    className="w-[56px] aspect-square rounded-full border border-[#585d65] text-lg font-bold leading-10"
+                                    onClick={() => carouselRef.current.prev()}
                                 >
-                                    {images.map((image, idx) => (
-                                        <div key={idx}>
-                                            <img
-                                                src={image}
-                                                alt="temp"
-                                                className="img"
-                                            />
-                                        </div>
-                                    ))}
-                                </OwlCarousel>
+                                    {/* <IoIosArrowBack className="mx-auto font-bold" /> */}
+                                    <IoIosArrowRoundBack className="mx-auto font-bold" />
+                                </button>
+                                <button
+                                    className="w-[56px] ml-4 aspect-square rounded-full border border-[#585d65]  text-lg font-bold leading-10"
+                                    onClick={() => carouselRef.current.next()}
+                                >
+                                    <IoIosArrowRoundForward className="mx-auto font-bold" />
+                                    {/* <IoIosArrowForward className="mx-auto font-bold" /> */}
+                                </button>
                             </div>
+                            <OwlCarousel
+                                ref={carouselRef}
+                                items={2}
+                                className="owl-theme"
+                                loop
+                                margin={8}
+                                navContainerClass="absolute top-[-100px] z-[30] right-0"
+                                navClass={["hidden", "hidden"]}
+                                nav={false}
+                                dots={false}
+                                
+                            >
+                                {images.map((image, idx) => (
+                                    <div
+                                        key={idx}
+                                    >
+                                        <img
+                                            src={image}
+                                            alt="temp"
+                                            className="img"
+                                        />
+                                    </div>
+                                ))}
+                            </OwlCarousel>
                         </div>
                     </div>
                 </div>

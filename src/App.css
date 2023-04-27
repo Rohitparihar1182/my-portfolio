@@ -195,4 +195,10 @@ input[type="range"] {
   .slider-image-item {
     padding: 20px 0 20px 20px;
   }
-  
+
+.writing-lr{
+    writing-mode: vertical-lr;
+}
+.font-mf-dafoe{
+    font-family: 'Mr Dafoe', cursive;
+}
