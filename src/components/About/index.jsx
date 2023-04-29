@@ -1,36 +1,17 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import SubHeading from "../../animatedComponents/SubHeading";
 import { SiGraphql } from "react-icons/si";
 import { IoCodeSlash } from "react-icons/io5";
 import { BsGithub, BsFillDatabaseFill } from "react-icons/bs";
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
-import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
-
-const images = [
-    "https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1549396535-c11d5c55b9df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1550133730-695473e544be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1550167164-1b67c2be3973?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1550223640-23097fc71cb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1550353175-a3611868086b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1550330039-a54e15ed9d33?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1549737328-8b9f3252b927?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1549833284-6a7df91c1f65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1549985908-597a09ef0a7c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1550064824-8f993041ffd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-];
+import Heading from "../common/Heading";
 
 export default function Index() {
-    const carouselRef = useRef(null);
     return (
         <section id="about">
             <article className="py-20 flex items-center border-b border-[#585d65]">
                 <div className="px-14">
                     <SubHeading text={"My Story"} />
-                    <h2 className="mt-4 text-6xl font-extrabold">About Me</h2>
+                    <Heading heading={'About Me'} />
                     <p className="mb-6 mt-10 tracking-wide font-medium text-[14px] leading-[1.7em]">
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Dicta a numquam, optio mollitia harum laudantium
@@ -127,9 +108,7 @@ export default function Index() {
                 <div className="px-14">
                     <div>
                         <SubHeading text={"What I do"} />
-                        <h2 className="mt-4 text-6xl font-extrabold">
-                            Technical Skills
-                        </h2>
+                        <Heading heading={'Technical Skills'} />
                         <div className="mt-12 grid grid-cols-2 gap-6">
                             <Card
                                 icon={
@@ -180,54 +159,7 @@ export default function Index() {
                             />
                         </div>
                     </div>
-                    <div className="mt-12">
-                        <SubHeading text={"Programming Langauages"} />
-                        <h2 className="mt-4 text-6xl font-extrabold">
-                            Languages
-                        </h2>
-                        <div className="container-fluid mt-12 relative">
-                            <div className="carousel-trigger absolute top-[-50%] right-0">
-                                <button
-                                    className="w-[56px] aspect-square rounded-full border border-[#585d65] text-lg font-bold leading-10"
-                                    onClick={() => carouselRef.current.prev()}
-                                >
-                                    {/* <IoIosArrowBack className="mx-auto font-bold" /> */}
-                                    <IoIosArrowRoundBack className="mx-auto font-bold" />
-                                </button>
-                                <button
-                                    className="w-[56px] ml-4 aspect-square rounded-full border border-[#585d65]  text-lg font-bold leading-10"
-                                    onClick={() => carouselRef.current.next()}
-                                >
-                                    <IoIosArrowRoundForward className="mx-auto font-bold" />
-                                    {/* <IoIosArrowForward className="mx-auto font-bold" /> */}
-                                </button>
-                            </div>
-                            <OwlCarousel
-                                ref={carouselRef}
-                                items={2}
-                                className="owl-theme"
-                                loop
-                                margin={8}
-                                navContainerClass="absolute top-[-100px] z-[30] right-0"
-                                navClass={["hidden", "hidden"]}
-                                nav={false}
-                                dots={false}
-                                
-                            >
-                                {images.map((image, idx) => (
-                                    <div
-                                        key={idx}
-                                    >
-                                        <img
-                                            src={image}
-                                            alt="temp"
-                                            className="img"
-                                        />
-                                    </div>
-                                ))}
-                            </OwlCarousel>
-                        </div>
-                    </div>
+                    
                 </div>
             </article>
         </section>

@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import SubHeading from "../../animatedComponents/SubHeading";
+import Heading from "../common/Heading";
 
 export default function Index() {
     return (
         <section id="contact" className="py-20 px-14">
             <div>
                 <SubHeading text={"Let's Talk"} />
-                <h2 className="mt-4 text-6xl font-extrabold">Contact</h2>
+                <Heading heading={'Contact'} />
             </div>
             <div className="grid grid-cols-2 gap-10 mt-16">
                 <ContactForm />
