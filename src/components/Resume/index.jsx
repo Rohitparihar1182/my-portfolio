@@ -175,8 +175,8 @@ export default function Index() {
 
             <article className="py-20 border-b border-[#585d65]">
                 <div className="px-14">
-                    <SubHeading text={"Coding Platforms"} />
-                    <Heading heading="Coding Profiles" />
+                    <SubHeading text={"Coding Languages"} />
+                    <Heading heading="Languages" />
                     <div className="mt-12 grid grid-cols-3 gap-3">
                         {codingSkills.map((skill, idx) => (
                             <CodingSkillsCard
