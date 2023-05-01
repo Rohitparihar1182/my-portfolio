@@ -4,18 +4,16 @@ import About from '../../components/About'
 import Contact from '../../components/Contact'
 import Portfolio from '../../components/Portfolio'
 import Resume from '../../components/Resume'
-import Spacer from '../../components/Spacer'
 
 
 export default function index() {
   return (
-    <main className='border-r border-[#585d65]'>
+    <main className='lg:border-r lg:border-[#585d65]'>
       <Intro />
       <About />
       <Resume />
       <Portfolio />
       <Contact />
-      <Spacer />
     </main>
   )
 }

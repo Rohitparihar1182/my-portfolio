@@ -4,13 +4,12 @@ import Heading from "../common/Heading";
 
 export default function Index() {
     return (
-        <section id="contact" className="py-20 px-14">
+        <section id="contact" className="py-20 px-4 md:px-14">
             <div>
                 <SubHeading text={"Let's Talk"} />
                 <Heading heading={'Contact'} />
             </div>
-            <div className="grid grid-cols-2 gap-10 mt-16">
-                <ContactForm />
+            <div className="grid lg:grid-cols-1 gap-10 mt-16">
                 <MyInfo
                     name="Rohit Parihar"
                     designation="Web Developer"
@@ -19,8 +18,9 @@ export default function Index() {
                     freelance="available"
                     address="Bgr, Uttarakhand"
                     phone="+91 7830558297"
-                    email="rohit...78384@gmail.com"
+                    email="rohitsinghparihar78384@gmail.com"
                 />
+                <ContactForm />
             </div>
         </section>
     );
@@ -158,35 +158,35 @@ function MyInfo({
 }) {
     return (
         <div className="border-[#585d65] border rounded-[32px]">
-            <div className="p-[30px] flex flex-col h-full justify-between gap-8">
+            <div className="p-[30px] max-w-full overflow-hidden flex flex-col h-full justify-between gap-8">
                 <div>
                     <h2 className="font-extrabold text-2xl">{name}</h2>
                     <h4 className="font-bold clr-theme text-[11px] mt-1 uppercase">{designation}</h4>
                 </div>
                 <div className="flex flex-col gap-4 text-[14px]">
+                    <div className="flex gap-3 font-bold max-w-full">
+                        <h2 className="uppercase clr-theme w-[12ch]">E-mail:</h2>
+                        <h2 className="text-ellipsis">{email}</h2>
+                    </div>
                     <div className="flex gap-3 font-bold">
-                        <h2 className="uppercase clr-theme">Age:</h2>
+                        <h2 className="uppercase clr-theme w-[12ch]">Age:</h2>
                         <h2 className="">{age}</h2>
                     </div>
                     <div className="flex gap-3 font-bold">
-                        <h2 className="uppercase clr-theme">Residence:</h2>
+                        <h2 className="uppercase clr-theme w-[12ch]">Residence:</h2>
                         <h2 className="">{residence}</h2>
                     </div>
                     <div className="flex gap-3 font-bold">
-                        <h2 className="uppercase clr-theme">Freelance:</h2>
+                        <h2 className="uppercase clr-theme w-[12ch]">Freelance:</h2>
                         <h2 className="">{freelance}</h2>
                     </div>
                     <div className="flex gap-3 font-bold">
-                        <h2 className="uppercase clr-theme">Address:</h2>
+                        <h2 className="uppercase clr-theme w-[12ch]">Address:</h2>
                         <h2 className="">{address}</h2>
                     </div>
                     <div className="flex gap-3 font-bold">
-                        <h2 className="uppercase clr-theme">Phone:</h2>
+                        <h2 className="uppercase clr-theme w-[12ch]">Phone:</h2>
                         <h2 className="">{phone}</h2>
-                    </div>
-                    <div className="flex gap-3 font-bold">
-                        <h2 className="uppercase clr-theme">E-mail:</h2>
-                        <h2 className="">{email}</h2>
                     </div>
                 </div>
                 

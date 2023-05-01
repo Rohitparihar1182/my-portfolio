@@ -5,13 +5,40 @@ import { IoCodeSlash } from "react-icons/io5";
 import { BsGithub, BsFillDatabaseFill } from "react-icons/bs";
 import Heading from "../common/Heading";
 
+const personalDetail = [
+    {
+        name: "age",
+        value: "21",
+    },
+    {
+        name: "email",
+        value: "rohitsinghparihar78384@gmail.com",
+    },
+    {
+        name: "phone",
+        value: "+91 7830558297",
+    },
+    {
+        name: "residence",
+        value: "India",
+    },
+    {
+        name: "address",
+        value: "Bgr, Uttarakhand",
+    },
+    {
+        name: "freelance",
+        value: "available",
+    },
+];
+
 export default function Index() {
     return (
         <section id="about">
             <article className="py-20 flex items-center border-b border-[#585d65]">
-                <div className="px-14">
+                <div className="px-4 md:px-14">
                     <SubHeading text={"My Story"} />
-                    <Heading heading={'About Me'} />
+                    <Heading heading={"About Me"} />
                     <p className="mb-6 mt-10 tracking-wide font-medium text-[14px] leading-[1.7em]">
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Dicta a numquam, optio mollitia harum laudantium
@@ -28,87 +55,29 @@ export default function Index() {
                         incidunt consequatur eveniet dolor aliquam ipsa? Vero
                         rem enim qui consequuntur.
                     </p>
-                    <div className="grid grid-cols-2 mt-4 gap-4">
-                        <div>
-                            <div className="grid grid-cols-3 mb-3">
-                                <div className="col-span-1 uppercase">
+                    <div className="grid grid-cols-2 gap-4">
+                        {personalDetail.map((item, idx) => (
+                            <div className="flex" key={idx}>
+                                <div className="min-w-[11ch] uppercase">
                                     <h3 className="text-sm clr-theme font-bold">
-                                        AGE:
+                                        {item.name}:
                                     </h3>
                                 </div>
-                                <div className="col-span-2">
-                                    <h3 className="text-sm font-bold">21</h3>
-                                </div>
-                            </div>
-                            <div className="grid grid-cols-3 mb-3">
-                                <div className="col-span-1 uppercase">
-                                    <h3 className="text-sm clr-theme font-bold">
-                                        EMAIL:
-                                    </h3>
-                                </div>
-                                <div className="col-span-2">
-                                    <h3 className="text-sm whitespace-nowrap text-ellipsis overflow-hidden font-semibold">
-                                        rohitsinghparihar78384@gmail.com
+                                <div className="overflow-hidden">
+                                    <h3 className="whitespace-nowrap text-ellipsis text-sm font-bold">
+                                        {item.value}
                                     </h3>
                                 </div>
                             </div>
-                            <div className="grid grid-cols-3">
-                                <div className="col-span-1 uppercase">
-                                    <h3 className="text-sm clr-theme font-bold">
-                                        PHONE:
-                                    </h3>
-                                </div>
-                                <div className="col-span-2">
-                                    <h3 className="text-sm font-bold">
-                                        +91 7830558297
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div className="grid grid-cols-3 mb-3">
-                                <div className="col-span-1 uppercase">
-                                    <h3 className="text-sm clr-theme font-bold">
-                                        Residence:
-                                    </h3>
-                                </div>
-                                <div className="col-span-2">
-                                    <h3 className="text-sm font-bold">India</h3>
-                                </div>
-                            </div>
-                            <div className="grid grid-cols-3 mb-3">
-                                <div className="col-span-1 uppercase">
-                                    <h3 className="text-sm clr-theme font-bold">
-                                        ADDRESS:
-                                    </h3>
-                                </div>
-                                <div className="col-span-2">
-                                    <h3 className="text-sm font-bold">
-                                        Bageshwar, Uttarakhand
-                                    </h3>
-                                </div>
-                            </div>
-                            <div className="grid grid-cols-3">
-                                <div className="col-span-1 uppercase">
-                                    <h3 className="text-sm clr-theme font-bold">
-                                        Freelance:
-                                    </h3>
-                                </div>
-                                <div className="col-span-2">
-                                    <h3 className="text-sm font-bold">
-                                        Available
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </article>
             <article className="py-20 border-b border-[#585d65]">
-                <div className="px-14">
+                <div className="px-4 md:px-14">
                     <div>
                         <SubHeading text={"What I do"} />
-                        <Heading heading={'Technical Skills'} />
+                        <Heading heading={"Technical Skills"} />
                         <div className="mt-12 grid grid-cols-2 gap-6">
                             <Card
                                 icon={
@@ -159,7 +128,6 @@ export default function Index() {
                             />
                         </div>
                     </div>
-                    
                 </div>
             </article>
         </section>

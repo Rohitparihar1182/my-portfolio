@@ -30,20 +30,43 @@ body {
     color: #fff;
     position: relative;
     overflow-x: hidden;
-    margin-left: 45%;
-    margin-right: 92px;
 }
 
-body::before{
-    content: "";
-    width: 55%;
-    height: 40px;
-    background-color: var(--bg-primary);
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 2;
+@media(width < 1024px){
+    .image-section{
+        background-image: url('./assets/avatar.jpg');
+        background-size: cover;
+        background-position: center center;
+    }
 }
+
+
+@media(width >= 1023px){
+    body{
+        margin-left: 30%;
+        margin-right: 92px;
+    }
+    body::before{
+        content: "";
+        width: 70%;
+        height: 40px;
+        background-color: var(--bg-primary);
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 2;
+    }
+}
+
+@media (width >= 1280px){
+    body{
+        margin-left: 45%;
+    }
+    body::before{
+        width: 55%;
+    }
+}
+
 
 body::-webkit-scrollbar{
     width: 8px;

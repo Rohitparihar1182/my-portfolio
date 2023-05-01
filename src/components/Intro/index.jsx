@@ -5,16 +5,16 @@ const titles = ["Web Developer", "Programmer", "Freelancer", "Open to work"];
 
 export default function Index() {
     return (
-        <section id="home" className="flex flex-col justify-end pt-[30vh] pb-10 border-b border-[#585d65]">
+        <section id="home" className="flex flex-col justify-end lg:pt-[30vh] pb-10 border-b border-[#585d65]">
             <div>
-                <div className="bg-primary w-fit translate-x-[-50%] p-12 aspect-square flex justify-center items-center rounded-full">
+                <div className="bg-primary w-fit mt-[-12%] mx-auto p-12 lg:mx-0 lg:mt-0 lg:translate-x-[-50%] lg:p-12 aspect-square flex justify-center items-center rounded-full">
                     <h1 className="text-6xl leading-[1.2em] font-extrabold">
                         Rohit <br />
                         Parihar
                     </h1>
                 </div>
             </div>
-            <div className="p-12 pt-4 max-w-[80%]">
+            <div className="p-12 pt-4 md:max-w-[80%]">
                 <AnimatedTitle titles={titles} />
                 <p className="my-8 tracking-wide font-medium text-[14px] leading-[1.7em]">
                     Hello! I am Web Developer from India, Uttarakhand. I have

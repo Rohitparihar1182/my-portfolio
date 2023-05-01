@@ -71,11 +71,11 @@ export default function Index() {
     return (
         <section id="resume">
             <article className="py-20 flex items-center border-b border-[#585d65]">
-                <div className="px-14 overflow-hidden">
+                <div className="px-4 md:px-14px-14 overflow-hidden">
                     <SubHeading text={"Studied At"} />
                     <Heading heading={"Education"} />
                     <div className="container-fluid mt-12 relative ">
-                        <div className="carousel-trigger absolute top-[-50%] right-0">
+                        <div className="carousel-trigger absolute top-[-100px] right-0">
                             <button
                                 className="w-[56px] aspect-square rounded-full border border-[#585d65] text-lg font-bold leading-10"
                                 onClick={() =>
@@ -122,11 +122,11 @@ export default function Index() {
                 </div>
             </article>
             <article className="py-20 flex items-center border-b border-[#585d65]">
-                <div className="px-14 overflow-hidden">
+                <div className="px-4 md:px-14 overflow-hidden">
                     <SubHeading text={"Studied At"} />
                     <Heading heading={"Experience"} />
                     <div className="container-fluid mt-12 relative ">
-                        <div className="carousel-trigger absolute top-[-50%] right-0">
+                        <div className="carousel-trigger absolute top-[-100px] right-0">
                             <button
                                 className="w-[56px] aspect-square rounded-full border border-[#585d65] text-lg font-bold leading-10"
                                 onClick={() =>
@@ -174,7 +174,7 @@ export default function Index() {
             </article>
 
             <article className="py-20 border-b border-[#585d65]">
-                <div className="px-14">
+                <div className="px-4 md:px-14">
                     <SubHeading text={"Coding Languages"} />
                     <Heading heading="Languages" />
                     <div className="mt-12 grid grid-cols-3 gap-3">
