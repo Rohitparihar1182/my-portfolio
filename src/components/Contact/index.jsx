@@ -9,7 +9,7 @@ export default function Index() {
                 <SubHeading text={"Let's Talk"} />
                 <Heading heading={'Contact'} />
             </div>
-            <div className="grid lg:grid-cols-1 gap-10 mt-16">
+            <div className="grid lg:grid-cols-1 gap-12 mt-16">
                 <MyInfo
                     name="Rohit Parihar"
                     designation="Web Developer"

@@ -37,7 +37,7 @@ const Index = () => {
     }, []);
 
     return (
-        <header className={`bg-secondary fixed w-full lg:top-10 lg:right-16 lg:left-16 overflow-hidden z-[100] lg:rounded-[100px] p-4 leading-5 ${isOpen ? 'h-full' : ''}`}>
+        <header className={`bg-secondary fixed w-full lg:w-auto lg:top-10 lg:right-16 lg:left-16 overflow-hidden z-[100] lg:rounded-[100px] p-4 leading-5 ${isOpen ? 'h-full' : ''}`}>
             <div className="pl-6 flex justify-between items-center">
                 <a href="/" onClick={() => setIsOpen(false)} className="flex gap-6 items-center">
                     

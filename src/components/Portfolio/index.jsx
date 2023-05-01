@@ -43,7 +43,7 @@ export default function Index() {
     return (
         <section id="portfolio" className=" hidden md:block">
             <article className="py-20 flex items-center border-b border-[#585d65]">
-                <div className="px-4 md:px-14px-14">
+                <div className="px-4 md:px-14">
                     <SubHeading text={"My Work"} />
                     <Heading heading={"Portfolio"} />
                     <div className="mt-12">
