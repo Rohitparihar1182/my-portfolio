@@ -65,10 +65,21 @@ const codingSkills = [
 	},
 ];
 
+const responsive = {
+	0: {
+		items: 1,
+		nav: true,
+	},
+	768: {
+		items: 2,
+		nav: true,
+	},
+};
+
 export default function Index() {
 	const educationCarouselRef = useRef(null);
 	const experienceCarouselRef = useRef(null);
-    
+
 	return (
 		<section id="resume">
 			<article className="py-20 flex items-center border-b overflow-x-hidden border-[#585d65]">
@@ -95,7 +106,7 @@ export default function Index() {
 								<IoIosArrowRoundForward className="mx-auto font-bold" />
 								{/* <IoIosArrowForward className="mx-auto font-bold" /> */}
 							</button>
-							
+
 							<div className="h-[1px] bg-[#585d65] z-[-1] w-[10000px] top-[50%] bottom-0 absolute left-0"></div>
 						</div>
 						<OwlCarousel
@@ -103,11 +114,15 @@ export default function Index() {
 							items={window.innerWidth > 768 ? 2 : 1}
 							className="owl-theme"
 							loop
+							responsive={responsive}
 							margin={8}
 							navContainerClass="absolute top-[-100px] z-[30] right-0"
 							navClass={["hidden", "hidden"]}
 							nav={false}
 							dots={false}
+							animateOut="slideOutDown"
+							smartSpeed={500}
+							animateIn='flipInX'
 						>
 							{education.map((edu, idx) => {
 								return (
@@ -155,11 +170,15 @@ export default function Index() {
 							items={window.innerWidth > 768 ? 2 : 1}
 							className="owl-theme"
 							loop
+							responsive={responsive}
 							margin={8}
 							navContainerClass="absolute top-[-100px] z-[30] right-0"
 							navClass={["hidden", "hidden"]}
 							nav={false}
 							dots={false}
+							animateOut="slideOutDown"
+							smartSpeed={500}
+							animateIn='flipInX'
 						>
 							{experience.map((exp, idx) => {
 								return (

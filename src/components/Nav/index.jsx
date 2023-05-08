@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo1.png";
 import { IoMdCloudDownload } from "react-icons/io";
 
 const Index = () => {
@@ -44,7 +44,7 @@ const Index = () => {
                 <a
                     href="/"
                     onClick={() => setIsOpen(false)}
-                    className="flex gap-6 items-center"
+                    className="flex gap-2 md:gap-6 items-center"
                 >
                     <img src={logo} alt="logo" className="w-10" />
                     <h1 className="font-black text-sm">
