@@ -10,20 +10,20 @@ const education = [
 	{
 		name: "Amrapali Institute Of Technology",
 		duration: "2019-2022",
-		text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta a numquam, optio mollitia harum laudantium delectus ea maiores doloremque sit officia `,
-		degree: "BCA",
+		text: `During my BCA program at Amrapali Institute of Technology and Applied Science, I gained a comprehensive understanding of computer science fundamentals and practical skills. The coursework covered a wide range of subjects, including programming, data structures, algorithms, database management, and web development.`,
+		degree: "Bachelor of Computer Applications (BCA)",
 	},
 	{
 		name: "Vivekanand Vidhya Mandi",
 		duration: "2017-2019",
-		text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta a numquam, optio mollitia harum laudantium delectus ea maiores doloremque sit officia `,
-		degree: "Class 12th",
+		text: `My higher secondary education at Vivekanand Vidhya Mandir provided a solid academic background and helped me develop critical thinking and analytical skills. The curriculum emphasized subjects such as Mathematics, Physics, and Computer Science, which laid the groundwork for my interest in technology and logical reasoning.`,
+		degree: "Higher Secondary Education (Class 12th)",
 	},
 	{
 		name: "Vivekanand Vidhya Mandi",
 		duration: "2015-2017",
-		text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta a numquam, optio mollitia harum laudantium delectus ea maiores doloremque sit officia `,
-		degree: "Class 10th",
+		text: `My secondary education at Vivekanand Vidhya Mandir played a vital role in shaping my academic foundation. The curriculum encompassed various subjects, including Mathematics, Science, Social Studies, and English. Through this educational journey, I acquired essential communication skills, time management abilities, and a strong work ethic`,
+		degree: "Secondary Education (Class 10th)",
 	},
 ];
 
@@ -31,13 +31,13 @@ const experience = [
 	{
 		company: "Offshore Marketers",
 		duration: "2 Months",
-		text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta a numquam, optio mollitia harum laudantium delectus ea maiores doloremque sit officia",
+		text: `In the WordPress domain, I actively contributed to developing and customizing WordPress websites. I gained hands-on experience in implementing themes, customizing themes and optimizing website performance. Collaborating closely with the development team, I participated in tasks such as front-end design modifications, content management, and troubleshooting technical issues.`,
 		designation: "Wordpress Developer",
 	},
 	{
 		company: "Quadb Technologies",
 		duration: "4 Months",
-		text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta a numquam, optio mollitia harum laudantium delectus ea maiores doloremque sit officia",
+		text: `During my four-month internship, I gained valuable experience working on diverse projects, including the development of the Heebee web POS and customer site. Additionally, I undertook the exciting challenge of creating a comprehensive HRM system from scratch, utilizing the powerful combination of Tauri, React, and Tailwind CSS.`,
 		designation: "React Js Developer",
 	},
 ];
@@ -122,7 +122,7 @@ export default function Index() {
 							dots={false}
 							animateOut="slideOutDown"
 							smartSpeed={500}
-							animateIn='flipInX'
+							animateIn="flipInX"
 						>
 							{education.map((edu, idx) => {
 								return (
@@ -178,7 +178,7 @@ export default function Index() {
 							dots={false}
 							animateOut="slideOutDown"
 							smartSpeed={500}
-							animateIn='flipInX'
+							animateIn="flipInX"
 						>
 							{experience.map((exp, idx) => {
 								return (
