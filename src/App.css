@@ -34,9 +34,15 @@ body {
 
 @media(width < 1024px){
     .image-section{
-        background-image: url('./assets/avatar.jpg');
+        background-image: url('./assets/avatar1.jpg');
         background-size: cover;
-        background-position: center center;
+        background-position: center -100px;
+    }
+}
+
+@media(width < 650px){
+    .image-section{
+        background-position: center top;
     }
 }
 

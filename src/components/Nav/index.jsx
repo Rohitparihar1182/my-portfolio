@@ -1,6 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
 import logo from "../../assets/logo1.png";
 import { IoMdCloudDownload } from "react-icons/io";
+import Resume from '../../assets/pdf/resume.pdf'
+
 
 const Index = () => {
     const observer = useRef(null);
@@ -123,7 +125,7 @@ const Index = () => {
                             </li>
                             <li>
                                 <a
-                                    href="/"
+                                    href={Resume}
                                     onClick={() => setIsOpen(false)}
                                     className="rounded-[100px] p-5 px-8 border clr-theme leading-4 border-[#68e0cf]"
                                 >
