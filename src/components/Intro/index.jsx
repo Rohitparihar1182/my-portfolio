@@ -21,7 +21,7 @@ export default function Index() {
                     rich experience in web site design and building, also I am
                     good at wordpress. I love to talk with you about our unique.
                 </p>
-                <AnimatedButton text={"Click me"} />
+                <AnimatedButton text={"Contact me"} />
             </div>
         </section>
     );

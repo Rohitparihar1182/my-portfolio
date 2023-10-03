@@ -5,7 +5,7 @@ const AnimatedButton = ({ text }) => {
     return (
         <div>
             <a
-                href="#spacer"
+                href="#contact"
                 className="group w-fit font-extrabold uppercase text-xs flex justify-center align-center gap-1 rounded-[100px] p-5 px-8 border leading-4 border-[#585d65] hover:border-[#68e0cf] ease-linear transition-all duration-300 "
             >
                 <span className="inline-block relative h-[18px] overflow-y-hidden">

@@ -58,7 +58,7 @@ export default function Index() {
 							View Code
 						</a>
 					</p>
-					<div className="grid grid-cols-2 gap-4">
+					<div className="grid md:grid-cols-2 gap-4">
 						{personalDetail.map((item, idx) => (
 							<div className="flex" key={idx}>
 								<div className="min-w-[11ch] uppercase">

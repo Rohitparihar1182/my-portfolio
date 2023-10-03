@@ -29,7 +29,6 @@ const Index = () => {
         );
 
         const sections = document.querySelectorAll("section");
-        console.log(sections);
 
         sections.forEach((section) => {
             observer.current.observe(section);
@@ -56,15 +55,14 @@ const Index = () => {
                     </h1>
                 </a>
                 <div
-                    className={`fixed lg:static -z-10 lg:z-auto left-0 w-full bg-secondary lg:w-auto top-[72px] overflow-hidden lg:overflow-visible grid lg:block transition-all duration-700 ${isOpen ? 'translate-y-0' : 'translate-y-[-120%]'} lg:translate-y-0`}
+                    className={`fixed lg:static -z-10 lg:z-auto left-0 w-full bg-secondary lg:w-auto top-[72px] overflow-hidden lg:overflow-visible grid lg:block transition-all duration-700 ${isOpen ? 'translate-x-0' : 'translate-x-[-120%]'} lg:translate-y-0`}
                 >
-                    <div className={`h-screen lg:h-auto pt-8 lg:pt-0 w-full lg:w-auto transition-all duration-500 ${isOpen ? 'opacity-100' : 'opacity-0'} lg:opacity-100`}>
+                    <div className={`h-screen lg:h-auto bg-secondary pt-8 lg:pt-0 w-full lg:w-auto transition-all duration-500  lg:opacity-100`}>
                         <ul className="flex flex-col h-full items-center lg:flex-row gap-8 text-xs uppercase font-extrabold">
                             <li>
                                 <a
-                                    className={`${
-                                        activePage === "home" ? "clr-theme" : ""
-                                    }`}
+                                    className={`${activePage === "home" ? "clr-theme" : ""
+                                        }`}
                                     href="#home"
                                     onClick={() => setIsOpen(false)}
                                 >
@@ -73,11 +71,10 @@ const Index = () => {
                             </li>
                             <li>
                                 <a
-                                    className={`${
-                                        activePage === "about"
-                                            ? "clr-theme"
-                                            : ""
-                                    }`}
+                                    className={`${activePage === "about"
+                                        ? "clr-theme"
+                                        : ""
+                                        }`}
                                     href="#about"
                                     onClick={() => setIsOpen(false)}
                                 >
@@ -86,11 +83,10 @@ const Index = () => {
                             </li>
                             <li>
                                 <a
-                                    className={`${
-                                        activePage === "resume"
-                                            ? "clr-theme"
-                                            : ""
-                                    }`}
+                                    className={`${activePage === "resume"
+                                        ? "clr-theme"
+                                        : ""
+                                        }`}
                                     href="#resume"
                                     onClick={() => setIsOpen(false)}
                                 >
@@ -99,11 +95,10 @@ const Index = () => {
                             </li>
                             <li>
                                 <a
-                                    className={`${
-                                        activePage === "portfolio"
-                                            ? "clr-theme"
-                                            : ""
-                                    }`}
+                                    className={`${activePage === "portfolio"
+                                        ? "clr-theme"
+                                        : ""
+                                        }`}
                                     href="#portfolio"
                                     onClick={() => setIsOpen(false)}
                                 >
@@ -112,11 +107,10 @@ const Index = () => {
                             </li>
                             <li>
                                 <a
-                                    className={`${
-                                        activePage === "contact"
-                                            ? "clr-theme"
-                                            : ""
-                                    }`}
+                                    className={`${activePage === "contact"
+                                        ? "clr-theme"
+                                        : ""
+                                        }`}
                                     href="#contact"
                                     onClick={() => setIsOpen(false)}
                                 >
@@ -138,33 +132,13 @@ const Index = () => {
                 </div>
                 <div className="lg:hidden">
                     <button
-                        className={`${isOpen ? "hidden" : "block"}`}
+                        className="button-three"
                         onClick={handleHam}
+                        aria-expanded={isOpen}
                     >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="25"
-                            height="18"
-                        >
-                            <g fill="#fff" fillRule="evenodd">
-                                <path d="M0 0h25v4H0zM0 7h25v4H0zM0 14h25v4H0z" />
-                            </g>
-                        </svg>
-                    </button>
-                    <button
-                        className={`${isOpen ? "block" : "hidden"}`}
-                        onClick={handleHam}
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="21"
-                            height="22"
-                        >
-                            <path
-                                fill="#fff"
-                                fillRule="evenodd"
-                                d="M17.925.747l2.828 2.828L13.328 11l7.425 7.425-2.828 2.828-7.425-7.425-7.425 7.425-2.828-2.828L7.671 11 .247 3.575 3.075.747 10.5 8.171 17.925.747z"
-                            />
+                        <svg stroke="#fff" fill="none" class="hamburger" viewBox="-10 -10 120 120" width="50">
+                            <path class="line" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70">
+                            </path>
                         </svg>
                     </button>
                 </div>

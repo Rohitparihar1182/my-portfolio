@@ -1,5 +1,4 @@
-1. details
-2. message box in contact form
+
 3. images for programming languages 
 4. put coding profiles section
 5. add functions to carousels

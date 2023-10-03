@@ -1,229 +1,256 @@
 :root {
-    --bg-primary: #373b40;
-    --bg-secondary: #585d65;
-    --clr-theme: #68e0cf;
+	--bg-primary: #373b40;
+	--bg-secondary: #585d65;
+	--clr-theme: #68e0cf;
 }
 
-html{
-    scroll-behavior: smooth;
-    scroll-padding-top: 100px;
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 100px;
 }
 
 .bg-primary {
-    background-color: var(--bg-primary);
+	background-color: var(--bg-primary);
 }
 
 .bg-secondary {
-    background-color: var(--bg-secondary);
+	background-color: var(--bg-secondary);
 }
 
 .clr-theme {
-    color: var(--clr-theme);
+	color: var(--clr-theme);
 }
 
-.hover-clr-theme:hover{
-    color: var(--clr-theme);
+.hover-clr-theme:hover {
+	color: var(--clr-theme);
 }
 
 body {
-    background-color: var(--bg-primary);
-    color: #fff;
-    position: relative;
-    overflow-x: hidden;
+	background-color: var(--bg-primary);
+	color: #fff;
+	position: relative;
+	overflow-x: hidden;
 }
 
-@media(width < 1024px){
-    .image-section{
-        background-image: url('./assets/avatar1.jpg');
-        background-size: cover;
-        background-position: center -100px;
-    }
+@media (width < 1024px) {
+	.image-section {
+		background-image: url("./assets/avatar1.jpg");
+		background-size: cover;
+		background-position: center -100px;
+	}
 }
 
-@media(width < 650px){
-    .image-section{
-        background-position: center top;
-    }
+@media (width < 650px) {
+	.image-section {
+		background-position: center top;
+	}
 }
 
-
-@media(width >= 1023px){
-    body{
-        margin-left: 30%;
-        margin-right: 92px;
-    }
-    body::before{
-        content: "";
-        width: 70%;
-        height: 40px;
-        background-color: var(--bg-primary);
-        position: fixed;
-        right: 0;
-        top: 0;
-        z-index: 2;
-    }
+@media (width >= 1023px) {
+	body {
+		margin-left: 30%;
+		margin-right: 92px;
+	}
+	body::before {
+		content: "";
+		width: 70%;
+		height: 40px;
+		background-color: var(--bg-primary);
+		position: fixed;
+		right: 0;
+		top: 0;
+		z-index: 2;
+	}
 }
 
-@media (width >= 1280px){
-    body{
-        margin-left: 45%;
-    }
-    body::before{
-        width: 55%;
-    }
+@media (width >= 1280px) {
+	body {
+		margin-left: 45%;
+	}
+	body::before {
+		width: 55%;
+	}
 }
 
-
-body::-webkit-scrollbar{
-    width: 8px;
+body::-webkit-scrollbar {
+	width: 8px;
 }
 
-body::-webkit-scrollbar-thumb{
-    background-color: #10DAC3;
-    border-radius: 50px;
+body::-webkit-scrollbar-thumb {
+	background-color: #10dac3;
+	border-radius: 50px;
 }
 
-body::-webkit-scrollbar-track{
-    background-color: #373b40;
+body::-webkit-scrollbar-track {
+	background-color: #373b40;
 }
 
 .loader-animation-title span {
-    display: inline-block;
-    transform: translateX(400px) scale(0);
-    animation: placeheading 800ms forwards;
-    user-select: none;
+	display: inline-block;
+	transform: translateX(400px) scale(0);
+	animation: placeheading 800ms forwards;
+	user-select: none;
 }
 
-.loader-animation-title:nth-child(1){
-    color: #C691FF;
+.loader-animation-title:nth-child(1) {
+	color: #c691ff;
 }
 
-.loader-animation-title:nth-child(2){
-    color: #10DAC3;
+.loader-animation-title:nth-child(2) {
+	color: #10dac3;
 }
 
 @keyframes placeheading {
-    from {
-        transform: translateX(400px) scale(0);
-    }
-    60% {
-        transform: translateX(-100px) scale(1);
-    }
-    to {
-        transform: translateX(0) scale(1);
-    }
+	from {
+		transform: translateX(400px) scale(0);
+	}
+	60% {
+		transform: translateX(-100px) scale(1);
+	}
+	to {
+		transform: translateX(0) scale(1);
+	}
 }
 
-h2.typewriter{
-    width: fit-content;
+h2.typewriter {
+	width: fit-content;
 }
 
 h2.typewriter span {
-    display: inline-block;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: 0.15em solid var(--clr-theme); /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    letter-spacing: 0.15em; /* Adjust as needed */
-    animation: typing 3s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
-    margin-right: auto;
+	display: inline-block;
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+	border-right: 0.15em solid var(--clr-theme); /* The typwriter cursor */
+	white-space: nowrap; /* Keeps the content on a single line */
+	letter-spacing: 0.15em; /* Adjust as needed */
+	animation: typing 3s steps(40, end) infinite,
+		blink-caret 0.75s step-end infinite;
+	margin-right: auto;
 }
 
 /* The typing effect */
 @keyframes typing {
-    from {
-        width: 0;
-    }
-    50% {
-        width: 100%;
-    }
-    to {
-        width: 0;
-    }
+	from {
+		width: 0;
+	}
+	50% {
+		width: 100%;
+	}
+	to {
+		width: 0;
+	}
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-    from,
-    to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: var(--clr-theme);
-    }
+	from,
+	to {
+		border-color: transparent;
+	}
+	50% {
+		border-color: var(--clr-theme);
+	}
 }
 
-.subheading{
-    position: relative;
+.subheading {
+	position: relative;
 }
 
-.subheading::before, 
+.subheading::before,
 .subheading::after {
-    content: '';
-    width: 8px;
-    aspect-ratio: 1;
-    background-color: var(--clr-theme);
-    display: inline-block;
-    border-radius: 50%;
+	content: "";
+	width: 8px;
+	aspect-ratio: 1;
+	background-color: var(--clr-theme);
+	display: inline-block;
+	border-radius: 50%;
 }
 
 .subheading::before {
-    margin-right: 0.5rem;
+	margin-right: 0.5rem;
 }
 
 .subheading::after {
-    margin-left: 0.5rem;
+	margin-left: 0.5rem;
 }
 
 input[type="range"] {
-    -webkit-appearance: none;
-  }
-  
-  input[type="range"]::-webkit-slider-runnable-track {
-    width: 300px;
-    height: 2px;
-    background: #ddd;
-    border: none;
-    border-radius: 3px;
-  }
-  
-  input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    border: none;
-    height: 5px;
-    width: 15%;
-    border-radius: 0%;
-    background: #000;
-    margin-top: -4px;
-  }
-  
-  input[type="range"]:focus {
-    outline: none;
-  }
-  
-  input[type="range"]:focus::-webkit-slider-runnable-track {
-    background: #ccc;
-  }
-  .carousel-container-with-scrollbar {
-    padding-left: 100px;
-    padding-bottom: 20px;
-    overflow: visible !important;
-  }
-  .custom-slider {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 0 20px;
-  }
-  .custom-slider__input {
-    width: 100%;
-  }
-  .slider-image-item {
-    padding: 20px 0 20px 20px;
-  }
-
-.writing-lr{
-    writing-mode: vertical-lr;
+	-webkit-appearance: none;
 }
-.font-mf-dafoe{
-    font-family: 'Mr Dafoe', cursive;
+
+input[type="range"]::-webkit-slider-runnable-track {
+	width: 300px;
+	height: 2px;
+	background: #ddd;
+	border: none;
+	border-radius: 3px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	border: none;
+	height: 5px;
+	width: 15%;
+	border-radius: 0%;
+	background: #000;
+	margin-top: -4px;
+}
+
+input[type="range"]:focus {
+	outline: none;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+	background: #ccc;
+}
+.carousel-container-with-scrollbar {
+	padding-left: 100px;
+	padding-bottom: 20px;
+	overflow: visible !important;
+}
+.custom-slider {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 0 20px;
+}
+.custom-slider__input {
+	width: 100%;
+}
+.slider-image-item {
+	padding: 20px 0 20px 20px;
+}
+
+.writing-lr {
+	writing-mode: vertical-lr;
+}
+.font-mf-dafoe {
+	font-family: "Mr Dafoe", cursive;
+}
+
+.button-three {
+	--button-color: white;
+	overflow: hidden;
+    border: 1px solid white;
+    padding: 4px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+}
+
+.button-three .hamburger {
+	transition: translate 1s, rotate 1s;
+}
+
+.button-three[aria-expanded="true"] .hamburger {
+	translate: 3px -3px;
+	rotate: 0.125turn;
+}
+
+.button-three .line {
+	transition: 1s;
+	stroke-dasharray: 60 31 60 300;
+}
+
+.button-three[aria-expanded="true"] .line {
+	stroke-dasharray: 60 105 60 300;
+	stroke-dashoffset: -90;
 }
