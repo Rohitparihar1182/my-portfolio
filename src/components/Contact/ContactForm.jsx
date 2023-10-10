@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import toast from "react-hot-toast";
 
 export default function ContactForm() {
     const [formData, setFormData] = useState({
@@ -29,9 +30,11 @@ export default function ContactForm() {
             if (response.ok) {
                 // Handle successful submission (e.g., show a thank you message)
                 console.log('Form submitted successfully');
+                toast.success("Form Submitted Successfully")
             } else {
                 // Handle error
                 console.error('Form submission failed');
+                toast.error('Form submission failed');
             }
             setFormData({
                 fullName: '',
@@ -40,6 +43,7 @@ export default function ContactForm() {
             });
         } catch (err) {
             console.log("Some error occured")
+            toast.error('Form submission failed');
         }
 
     }

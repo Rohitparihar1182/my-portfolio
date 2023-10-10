@@ -55,7 +55,7 @@ const Index = () => {
                     </h1>
                 </a>
                 <div
-                    className={`fixed lg:static -z-10 lg:z-auto left-0 w-full bg-secondary lg:w-auto top-[72px] overflow-hidden lg:overflow-visible grid lg:block transition-all duration-700 ${isOpen ? 'translate-x-0' : 'translate-x-[-120%]'} lg:translate-y-0`}
+                    className={`fixed lg:static -z-10 lg:z-auto left-0 w-full bg-secondary lg:w-auto top-[72px] overflow-hidden lg:overflow-visible grid lg:block transition-all duration-700 ${isOpen ? 'translate-x-0' : 'translate-x-[-120%]'} lg:translate-x-0`}
                 >
                     <div className={`h-screen lg:h-auto bg-secondary pt-8 lg:pt-0 w-full lg:w-auto transition-all duration-500  lg:opacity-100`}>
                         <ul className="flex flex-col h-full items-center lg:flex-row gap-8 text-xs uppercase font-extrabold">
