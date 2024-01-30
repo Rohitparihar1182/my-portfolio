@@ -1,37 +1,46 @@
 import React, { useState } from "react";
 import Heading from "../common/Heading";
 import SubHeading from "../../animatedComponents/SubHeading";
+import EcommerceAdminImage from '../../assets/portfolioItems/ecommerceAdmin.png';
+import EcommerceStoreImage from '../../assets/portfolioItems/ecommerceStore.png';
+import PragatiHRMImage from '../../assets/portfolioItems/pragatiHRM.png';
+import QuizAppImage from '../../assets/portfolioItems/quizApp.png';
+import HeebeeImage from '../../assets/portfolioItems/heebee.png';
+import Logo from '../../assets/logo6.png';
 
 const portfolioItems = [
     {
-        name: "Name",
+        name: "Pragati HRM",
         content:
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae vel nihil ipsam voluptatum pariatur dolor velit fugiat iste odio iure!",
-        img: "https://unsplash.it/500/500",
+            `I created a Human Resource Management (HRM) system for the
+            company, leveraging Tauri and React. This involved building a user-friendly interface and integrating essential
+            functionalities to enhance HR processes and improve efficiency within the organization.`,
+        img: PragatiHRMImage,
     },
     {
-        name: "Name",
+        name: "Ecommerce Admin",
         content:
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae vel nihil ipsam voluptatum pariatur dolor velit fugiat iste odio iure!",
-        img: "https://unsplash.it/500/500",
+            "Unfinished!!!",
+        img: EcommerceAdminImage,
     },
     {
-        name: "Name",
+        name: "Ecommerce Store",
         content:
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae vel nihil ipsam voluptatum pariatur dolor velit fugiat iste odio iure!",
-        img: "https://unsplash.it/500/500",
+            "Unfinished!!!",
+        img: EcommerceStoreImage,
     },
     {
-        name: "Name",
+        name: "Quiz App",
         content:
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae vel nihil ipsam voluptatum pariatur dolor velit fugiat iste odio iure!",
-        img: "https://unsplash.it/500/500",
+            `Developed a quiz app utilizing React and the Open Trivia Database, providing users with
+            an interactive platform to test their knowledge and engage in trivia challenges.`,
+        img: QuizAppImage,
     },
     {
-        name: "Name",
+        name: "Heebee Webpos",
         content:
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae vel nihil ipsam voluptatum pariatur dolor velit fugiat iste odio iure!",
-        img: "https://unsplash.it/500/500",
+            ` Contributed to the development of HeeBee WebPOS project , utilizing React and Redux technologies for building a robust and efficient point-of-sale system.`,
+        img: HeebeeImage,
     },
 ];
 
@@ -68,37 +77,37 @@ export default function Index() {
     );
 }
 
-function PortfolioCard({ name, content, idx, activeTab, handleClick }) {
+function PortfolioCard({ name, content, idx, activeTab, handleClick, img }) {
     return (
         <div
-            className={`relative overflow-hidden rounded-[30px] transition-all duration-300 ease-in p-4 max-h-72 cursor-pointer isolate ${
-                activeTab === idx ? "basis-[350px] md:basis-full lg:basis-[350px] 2xl:basis-full" : "basis-[64px]"
-            }`}
+            className={`relative overflow-hidden rounded-[30px] transition-all duration-300 ease-in p-4 max-h-72 cursor-pointer isolate ${activeTab === idx ? "basis-[350px] md:basis-full lg:basis-[350px] 2xl:basis-full" : "basis-[64px]"
+                }`}
             onClick={() => handleClick(idx)}
         >
-            <h2 id={`portfolio-title-${idx}`} className="text-lg">
+            <h2 id={`relative z-10 portfolio-title-${idx}`} className="text-lg">
                 <button
-                    className=""
+                    className="clr-theme font-bold text-md"
                     aria-controls={`portfolio-content-${idx}`}
                     aria-expanded={activeTab === idx}
                 >
-                    {name}
+                    {activeTab === idx ? (<span className="whitespace-nowrap absolute z-10 top-4">{name}</span>) : (<img src={Logo} alt="logo" className="max-w-[19.09px]" />)}
                 </button>
             </h2>
             <div
                 id={`portfolio-content-${idx}`}
-                className=""
+                className="relative z-10 mt-2 leading-5 font-semibold text-sm"
                 aria-labelledby={`portfolio-title-${idx}`}
                 role="region"
             >
-                <p style={activeTab === idx ? {transition: 'all 300ms linear 300ms', opacity: 1} : {transition: 'all 100ms linear', opacity: 0}}>{content}</p>
-                <img
-                    draggable='false'
-                    src="https://images.unsplash.com/photo-1682258687337-9d2ca99054cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
-                    alt={name}
-                    className="absolute inset-0 object-cover w-full h-full -z-10"
-                />
+                <p style={activeTab === idx ? { transition: 'all 300ms linear 300ms', opacity: 1 } : { transition: 'all 100ms linear', opacity: 0 }}>{content}</p>
             </div>
+            <img
+                draggable='false'
+                src={img}
+                alt={name}
+                className="absolute inset-0 object-cover w-full h-full -z-10"
+            />
+            <div className={`absolute inset-0 object-cover w-full h-full -z-9 transition duration-300 ${activeTab === idx ? " bg-black/30" : ""}`}></div>
         </div>
     );
 }

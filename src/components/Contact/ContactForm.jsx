@@ -19,7 +19,7 @@ export default function ContactForm() {
         e.preventDefault();
 
         try {
-            const response = await fetch('https://formspree.io/f/xvojvqwq', {
+            const response = await fetch(process.env.FORMENDPOINT, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
