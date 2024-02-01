@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-const TEXT = ["Hey!", "There"];
+const TEXT = ["Aye You!", "Welcome"];
 
 export default function PageLoader() {
     const [style, setStyle] = React.useState({});
