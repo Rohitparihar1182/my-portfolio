@@ -30,14 +30,14 @@ const education = [
 const experience = [
 	{
 		company: "Offshore Marketers",
-		duration: "2 Months",
+		duration: "6 Months",
 		text: `In the WordPress domain, I actively contributed to developing and customizing WordPress websites. I gained hands-on experience in implementing themes, customizing themes and optimizing website performance. Collaborating closely with the development team, I participated in tasks such as front-end design modifications, content management, and troubleshooting technical issues.`,
 		designation: "Wordpress Developer",
 	},
 	{
 		company: "Quadb Technologies",
-		duration: "4 Months",
-		text: `During my four-month internship, I gained valuable experience working on diverse projects, including the development of the Heebee web POS and customer site. Additionally, I undertook the exciting challenge of creating a comprehensive HRM system from scratch, utilizing the powerful combination of Tauri, React, and Tailwind CSS.`,
+		duration: "8 Months",
+		text: `During my eight-month internship, I gained valuable experience working on diverse projects, including the development of the Heebee web POS and customer site. Additionally, I undertook the exciting challenge of creating a comprehensive HRM system from scratch, utilizing the powerful combination of Tauri, React, and Tailwind CSS.`,
 		designation: "React Js Developer",
 	},
 ];

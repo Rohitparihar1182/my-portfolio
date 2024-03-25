@@ -32,6 +32,11 @@ body {
 	overflow-x: hidden;
 }
 
+*::selection{
+	background-color: #fcaa18;
+	color: black;
+}
+
 @media (width < 1024px) {
 	.image-section {
 		background-image: url("./assets/avatar1.jpg");
